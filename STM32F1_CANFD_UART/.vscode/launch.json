@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "./MDK-ARM-Project/output/CANFD_TEST.axf",
+            "name": "Debug with OpenOCD",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "searchDir": [],
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "configFiles": [
+                "./MDK-ARM-Project/stlink-v2.cfg",
+                "./MDK-ARM-Project/stm32f1x.cfg"
+            ],
+        }
+
+
+    ]
+}
