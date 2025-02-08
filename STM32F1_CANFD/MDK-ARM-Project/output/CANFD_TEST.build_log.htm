@@ -1,0 +1,125 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Javi Yang, JY, LIC=ATTQ1-CFGDV-EVF1R-KHSK3-N70GT-3ZR3A
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.26.2.0
+Toolchain Path:  D:\Program Files\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DARMSTM.DLL V1.68.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TARMSTM.DLL V1.66.0.0
+ 
+<h2>Project:</h2>
+D:\Projects\STM32F1_CANFD_MCP2518FD_SPI1_test\STM32F1_CANFD_MCP2518FD_SPI1(Ó²¼þSPI1)\MDK-ARM-Project\STM32F1_CANFD_MCP2518FD.uvprojx
+Project File Date:  12/28/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files\ARM\ARMCC\Bin'
+Rebuild target 'CANFD-TEST'
+assembling startup_stm32f10x_md.s...
+compiling bsp_usart.c...
+compiling stm32f10x_it.c...
+compiling delay.c...
+compiling system_stm32f10x.c...
+compiling main.c...
+..\User\main.c(118): warning:  #550-D: variable "res"  was set but never used
+      int8_t pin, res = 0;
+..\User\main.c: 1 warning, 0 errors
+compiling dev_can.c...
+compiling drv_canfdspi_api.c...
+..\Driver\canfdspi\drv_canfdspi_api.c(658): warning:  #177-D: variable "d"  was declared but never referenced
+      uint8_t d = 0;
+..\Driver\canfdspi\drv_canfdspi_api.c(686): warning:  #177-D: variable "d"  was declared but never referenced
+      uint8_t d = 0;
+..\Driver\canfdspi\drv_canfdspi_api.c(796): warning:  #550-D: variable "ciFifoSta"  was set but never used
+      REG_CiFIFOSTA ciFifoSta;
+..\Driver\canfdspi\drv_canfdspi_api.c(1261): warning:  #550-D: variable "ciFifoSta"  was set but never used
+      REG_CiFIFOSTA ciFifoSta;
+..\Driver\canfdspi\drv_canfdspi_api.c(1441): warning:  #550-D: variable "ciTefSta"  was set but never used
+      REG_CiTEFSTA ciTefSta;
+..\Driver\canfdspi\drv_canfdspi_api.c(2911): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3089): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3167): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3242): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3295): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3309): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3387): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3444): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3479): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3493): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3497): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3719): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c(3757): warning:  #111-D: statement is unreachable
+              break;
+..\Driver\canfdspi\drv_canfdspi_api.c: 18 warnings, 0 errors
+compiling core_cm3.c...
+compiling drv_spi_mcp2517fd.c...
+compiling sys_phr.c...
+compiling misc.c...
+compiling sys_timer.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_cec.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_wwdg.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_tim.c...
+linking...
+Program Size: Code=11168 RO-data=1156 RW-data=144 ZI-data=1888  
+FromELF: creating hex file...
+".\output\CANFD_TEST.axf" - 0 Error(s), 19 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.1.0.pack
+                Keil.STM32F1xx_DFP.2.1.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_CANFD-TEST
+  D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
