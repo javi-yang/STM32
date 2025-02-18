@@ -10,6 +10,8 @@ Updated for AMP usage. 2025.1.7 YANG
 #include "main.h"
 #include "sys_phr.h"
 #include "sys_timer.h"
+#include "stm32f10x_gpio.h"
+#include "stm32f10x_usart.h"
 
 void can_msg_transmit(void);
 int8_t canfd_rcv_poll(void);
@@ -27,6 +29,35 @@ CANFD_RX_MSG can_rx_msg;
 CANFD_TX_MSG can_tx_msg;
 
 void Uart1_SendData(unsigned char data);
+void USART1_IRQHandler(void)
+{
+    if (USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+    {
+        uint8_t received_data = USART_ReceiveData(USART1);
+
+        if (received_data == 'B')
+        {
+            uint8_t next_data = USART_ReceiveData(USART1);
+            if (next_data == '1')
+            {
+                next_data = USART_ReceiveData(USART1);
+                if (next_data == '1')
+                {
+                    next_data = USART_ReceiveData(USART1);
+                    if (next_data == '1')
+                    {
+                        GPIO_SetBits(GPIOB, GPIO_Pin_11); // Set port B11 to high
+                    }
+                    else if (next_data == '0')
+                    {
+                        GPIO_ResetBits(GPIOB, GPIO_Pin_11); // Set port B11 to low
+                    }
+                }
+            }
+        }
+    }
+}
+
 int main(void)
 {
     RCC_ClocksTypeDef RCC_Clocks;
@@ -43,6 +74,24 @@ int main(void)
     delay_10ms(50);
     can_tx_msg.head.word[0] = 0;
     can_tx_msg.head.word[1] = 0;
+
+    // Initialize GPIOB Pin 11
+    GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
+
+    // Enable USART1 interrupt
+    NVIC_InitTypeDef NVIC_InitStructure;
+    NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+
+    USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);
 
 		
 		while(1)
