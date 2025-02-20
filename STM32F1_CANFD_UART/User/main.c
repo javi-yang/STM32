@@ -28,35 +28,7 @@ int vol_data = 0x61;
 CANFD_RX_MSG can_rx_msg;
 CANFD_TX_MSG can_tx_msg;
 
-void Uart1_SendData(unsigned char data);
-void USART1_IRQHandler(void)
-{
-    if (USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
-    {
-        uint8_t received_data = USART_ReceiveData(USART1);
 
-        if (received_data == 'B')
-        {
-            uint8_t next_data = USART_ReceiveData(USART1);
-            if (next_data == '1')
-            {
-                next_data = USART_ReceiveData(USART1);
-                if (next_data == '1')
-                {
-                    next_data = USART_ReceiveData(USART1);
-                    if (next_data == '1')
-                    {
-                        GPIO_SetBits(GPIOB, GPIO_Pin_11); // Set port B11 to high
-                    }
-                    else if (next_data == '0')
-                    {
-                        GPIO_ResetBits(GPIOB, GPIO_Pin_11); // Set port B11 to low
-                    }
-                }
-            }
-        }
-    }
-}
 
 int main(void)
 {
@@ -99,24 +71,24 @@ int main(void)
 			for(j = 0; j < 8; j++)  //YANG: wakeup message
             {
 
-							    if(0) //IDE initialize  YANG:IDE not used, set to faulse
-									{
-										uint32_t id = (0x2B0) >> 18 & 0x7FF;
-										id |= (0x2B0 & 0x3FFFF) << 11;
-										can_tx_msg.head.word[0] = id;
-									}
-									else	//��׼֡��ʼ��֡ͷ
-									{
-										can_tx_msg.head.bF.id.SID = 0x2B0;  //YANG: Wakeup message ID
-									}
+				if(0) //IDE initialize  YANG:IDE not used, set to faulse
+					{
+						uint32_t id = (0x2B0) >> 18 & 0x7FF;
+						id |= (0x2B0 & 0x3FFFF) << 11;
+						can_tx_msg.head.word[0] = id;
+					}
+					else	//��׼֡��ʼ��֡ͷ
+					{
+						can_tx_msg.head.bF.id.SID = 0x2B0;  //YANG: Wakeup message ID
+					}
 
-									can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//   YANG: changed from 64 to 8  ���Ȳο���CAN_DLC�����壬�����������û�еĲ���
-									can_tx_msg.head.bF.ctrl.IDE = 0;	// Extended CAN ID false
-									can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
-									can_tx_msg.head.bF.ctrl.BRS = TRUE;	//�л����ʣ�Ҳ�������������������ʷ���/����
-									can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD							
+				can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//   YANG: changed from 64 to 8  ���Ȳο���CAN_DLC�����壬�����������û�еĲ���
+				can_tx_msg.head.bF.ctrl.IDE = 0;	// Extended CAN ID false
+				can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
+				can_tx_msg.head.bF.ctrl.BRS = TRUE;	//�л����ʣ�Ҳ�������������������ʷ���/����
+				can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD							
 							
-								can_tx_msg.dat[0] = d;
+				can_tx_msg.dat[0] = d;
 
             }
 
