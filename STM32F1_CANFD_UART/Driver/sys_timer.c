@@ -133,14 +133,9 @@ void send_canfd_k3_test()
 void process_key()
 {
 	static uint16_t IN3,IN3_1,IN3_2,IN3_3,
-								 IN4,IN4_1,IN4_2,IN4_3,IN5,IN5_1,IN5_2,IN5_3,IN_11;
+								 IN4,IN4_1,IN4_2,IN4_3,IN5,IN5_1,IN5_2,IN5_3;
 /**************************************K1****************************************************************/
     
-	IN_11=GPIO_ReadInputDataBit(K4_GPIO_PORT, K4_PIN);
-	if(IN_11==0)
-	{
-		printf("YESYES\r\n");
-	}
 
 
 	IN3_2=GPIO_ReadInputDataBit(K1_GPIO_PORT, K1_PIN);

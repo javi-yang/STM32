@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\CANFD_TEST.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\CANFD_TEST.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Feb 20 16:06:46 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Feb 20 18:23:13 2025
 <BR><P>
 <H3>Maximum Stack Usage =        336 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -628,8 +628,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
 </UL>
 
-<P><STRONG><a name="[93]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadInputDataBit))
-<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
+<P><STRONG><a name="[91]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadInputDataBit))
+<BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
 </UL>
 
 <P><STRONG><a name="[95]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
@@ -861,7 +862,7 @@ Global Symbols
 
 <P><STRONG><a name="[a0]"></a>__1printf$bare</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
 
-<P><STRONG><a name="[91]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare))
+<P><STRONG><a name="[92]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
 </UL>
@@ -946,7 +947,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
 </UL>
 
-<P><STRONG><a name="[92]"></a>delay_10ms</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, delay.o(i.delay_10ms))
+<P><STRONG><a name="[93]"></a>delay_10ms</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, delay.o(i.delay_10ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_10ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -979,29 +980,30 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfb.o(i.__0printf$bare)
 </UL>
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 442 bytes, Stack size 32 bytes, main.o(i.main))
+<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 480 bytes, Stack size 32 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 336<LI>Call Chain = main &rArr; can_msg_transmit &rArr; can_transmit_msg &rArr; DRV_CANFDSPI_TransmitChannelLoad &rArr; DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10ms
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10ms
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[74]"></a>process_key</STRONG> (Thumb, 414 bytes, Stack size 8 bytes, sys_timer.o(i.process_key))
+<P><STRONG><a name="[74]"></a>process_key</STRONG> (Thumb, 388 bytes, Stack size 8 bytes, sys_timer.o(i.process_key))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = process_key
 </UL>
-<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_IRQHandler
 </UL>

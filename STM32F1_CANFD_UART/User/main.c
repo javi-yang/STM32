@@ -28,6 +28,7 @@ int vol_data = 0x61;
 CANFD_RX_MSG can_rx_msg;
 CANFD_TX_MSG can_tx_msg;
 
+static uint16_t IN8;
 
 
 int main(void)
@@ -42,6 +43,12 @@ int main(void)
     Timer1_Config();
 		//etk_can_init(CAN_1000K_4M);
     etk_can_init(CAN_500K_2M);		// YANG: changed to 500K/2M  ���ݲ�����500K  CANFD��ʼ�� //���������ʲο���CAN_BITTIME_SETUP������������ò�����û������Ҫ����MCP2518FD�����ֲ���������
+    IN8=GPIO_ReadInputDataBit(K4_GPIO_PORT, K4_PIN);
+    if(GPIO_ReadInputDataBit(K4_GPIO_PORT, K4_PIN)==0)
+    {
+        printf("YESYES\r\n");
+        etk_can_init(CAN_500K_5M);
+    }
     printf("STM32F1 CANFD TEST\r\n");
     delay_10ms(50);
     can_tx_msg.head.word[0] = 0;
