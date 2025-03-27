@@ -2,8 +2,8 @@
 filename : main.c
 discript : STM32F1 CANFD driver
 time     : 2023.11.15
-ÌÔ±¦µêÆÌ£ºÔÆÅ·ÖÇÄÜ
-Àý³Ì£ºÊ¹ÓÃSTM32F103C8T6 SPI2ÓëMCP2518FDÐ¾Æ¬½øÐÐÍ¨Ñ¶
+ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½Ì£ï¿½Ê¹ï¿½ï¿½STM32F103C8T6 SPI2ï¿½ï¿½MCP2518FDÐ¾Æ¬ï¿½ï¿½ï¿½ï¿½Í¨Ñ¶
 Updated for AMP usage. 2025.1.7 YANG
 ********************************************************************/
 
@@ -22,6 +22,8 @@ uint16_t d = 0x61;
 
 int vol_data = 0x61;
 
+int vol_data_test = 0xA1;
+
 
 CANFD_RX_MSG can_rx_msg;
 CANFD_TX_MSG can_tx_msg;
@@ -33,14 +35,14 @@ int main(void)
 
     RCC_GetClocksFreq(&RCC_Clocks);
     SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
-    RCC_APB2PeriphClockCmd(	RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB, ENABLE ); //PORTBÊ±ÖÓÊ¹ÄÜ
+    RCC_APB2PeriphClockCmd(	RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB, ENABLE ); //PORTBÊ±ï¿½ï¿½Ê¹ï¿½ï¿½
     System_Phr_Init();
-    usart_init(115200);//µ÷ÊÔ´®¿Ú
+    usart_init(115200);//ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½
     Timer1_Config();
 		//etk_can_init(CAN_1000K_4M);
-    etk_can_init(CAN_500K_2M);		// YANG: changed to 500K/2M  Êý¾Ý²¨ÌØÂÊ500K  CANFD³õÊ¼»¯ //ÆäËû²¨ÌØÂÊ²Î¿¼¡°CAN_BITTIME_SETUP¡±²ÎÊý£¬Èç¹û¸Ã²ÎÊýÖÐÃ»ÓÐÔòÐèÒª²éÔÄMCP2518FDÊý¾ÝÊÖ²á×ÔÐÐÅäÖÃ
+    etk_can_init(CAN_500K_2M);		// YANG: changed to 500K/2M  ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ï¿½ï¿½500K  CANFDï¿½ï¿½Ê¼ï¿½ï¿½ //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Î¿ï¿½ï¿½ï¿½CAN_BITTIME_SETUPï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½MCP2518FDï¿½ï¿½ï¿½ï¿½ï¿½Ö²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     printf("STM32F1 CANFD TEST\r\n");
-    delay_10ms(50);
+    delay_10ms(5);
     can_tx_msg.head.word[0] = 0;
     can_tx_msg.head.word[1] = 0;
 
@@ -56,15 +58,15 @@ int main(void)
 										id |= (0x2B0 & 0x3FFFF) << 11;
 										can_tx_msg.head.word[0] = id;
 									}
-									else	//±ê×¼Ö¡³õÊ¼»¯Ö¡Í·
+									else	//ï¿½ï¿½×¼Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 									{
 										can_tx_msg.head.bF.id.SID = 0x2B0;  //YANG: ID?? changed from 123 to 666
 									}
 
-									can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//   YANG: changed from 64 to 8  ³¤¶È²Î¿¼¡°CAN_DLC¡±¶¨Òå£¬²»¿ÉÒÔÌî¶¨ÒåÀïÃ»ÓÐµÄ²ÎÊý
+									can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//   YANG: changed from 64 to 8  ï¿½ï¿½ï¿½È²Î¿ï¿½ï¿½ï¿½CAN_DLCï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¶¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ÐµÄ²ï¿½ï¿½ï¿½
 									can_tx_msg.head.bF.ctrl.IDE = 0;	// Extended CAN ID false
 									can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
-									can_tx_msg.head.bF.ctrl.BRS = TRUE;	//ÇÐ»»ËÙÂÊ£¬Ò²¾ÍÊÇÊý¾ÝÓòÆô¶¯¸ßËÙÂÊ·¢ËÍ/½ÓÊÕ
+									can_tx_msg.head.bF.ctrl.BRS = TRUE;	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 									can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD							
 							
 								can_tx_msg.dat[0] = d;
@@ -73,35 +75,36 @@ int main(void)
 
             can_msg_transmit();
 			
-			delay_10ms(20);
+			delay_10ms(10);
 
 						for(j = 0; j < 8; j++)   //YANG: VOL setting message
             {
-							if(0) //À©Õ¹Ö¡³õÊ¼»¯Ö¡Í·  YANG:IDE not used, set to faulse
+							if(0) //ï¿½ï¿½Õ¹Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·  YANG:IDE not used, set to faulse
 									{
 										uint32_t id = (0x666) >> 18 & 0x7FF;
 										id |= (0x666 & 0x3FFFF) << 11;
 										can_tx_msg.head.word[0] = id;
 									}
-									else	//±ê×¼Ö¡³õÊ¼»¯Ö¡Í· YANG: Use standard
+									else	//ï¿½ï¿½×¼Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í· YANG: Use standard
 									{
 										can_tx_msg.head.bF.id.SID = 0x666;  
 									}
 
-									can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//   YANG: changed from 64 to 8  ³¤¶È²Î¿¼¡°CAN_DLC¡±¶¨Òå£¬²»¿ÉÒÔÌî¶¨ÒåÀïÃ»ÓÐµÄ²ÎÊý
+									can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//   YANG: changed from 64 to 8  ï¿½ï¿½ï¿½È²Î¿ï¿½ï¿½ï¿½CAN_DLCï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¶¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ÐµÄ²ï¿½ï¿½ï¿½
 									can_tx_msg.head.bF.ctrl.IDE = 0;	// Extended CAN ID false
 									can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
-									can_tx_msg.head.bF.ctrl.BRS = TRUE;	//ÇÐ»»ËÙÂÊ£¬Ò²¾ÍÊÇÊý¾ÝÓòÆô¶¯¸ßËÙÂÊ·¢ËÍ/½ÓÊÕ
+									can_tx_msg.head.bF.ctrl.BRS = TRUE;	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 									can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD
 							
 							
-									can_tx_msg.dat[0] = vol_data;  //YANG: Adjustable volumn data vol_data. Controlled by external key.
+									can_tx_msg.dat[0] = vol_data;
+                                    can_tx_msg.dat[1] = vol_data_test;  //YANG: Adjustable volumn data vol_data. Controlled by external key.
 
             }
 
             can_msg_transmit();
 						
-			delay_10ms(20);			
+			delay_10ms(10);			
 						
 		}
 			
@@ -109,9 +112,9 @@ int main(void)
 
 /********************************************************************
 function: can_rcv_poll
-discript: CAN½ÓÊÕÊý¾Ý²éÑ¯.
+discript: CANï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý²ï¿½Ñ¯.
 entrance: none.
-return  : ¶ÁÈ¡µÄCANÏûÏ¢ÊýÁ¿
+return  : ï¿½ï¿½È¡ï¿½ï¿½CANï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½
 ********************************************************************/
 int8_t canfd_rcv_poll(void)
 {

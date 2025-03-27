@@ -1,8 +1,8 @@
 /********************************************************************
 discript : STM32F1 CANFD driver
 time     : 2023.11.15
-ÌÔ±¦µêÆÌ£ºÔÆÅ·ÖÇÄÜ
-Àý³Ì£ºÊ¹ÓÃSTM32F103C8T6 SPI2ÓëMCP2518FDÐ¾Æ¬½øÐÐÍ¨Ñ¶
+ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ì£ï¿½ï¿½ï¿½Å·ï¿½ï¿½ï¿½ï¿½
+ï¿½ï¿½ï¿½Ì£ï¿½Ê¹ï¿½ï¿½STM32F103C8T6 SPI2ï¿½ï¿½MCP2518FDÐ¾Æ¬ï¿½ï¿½ï¿½ï¿½Í¨Ñ¶
 ********************************************************************/
 
 #include "stm32f10x.h"
@@ -44,20 +44,20 @@ void send_canfd_test()
 {
 	can_tx_msg.head.word[0] = 0;
 	can_tx_msg.head.word[1] = 0;
-	if(1) //À©Õ¹Ö¡³õÊ¼»¯Ö¡Í·
+	if(1) //ï¿½ï¿½Õ¹Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 	{
 			uint32_t id = (0x12345678)>>18 & 0x7FF;
 			id |= (0x12345678 & 0x3FFFF)<<11;
 			can_tx_msg.head.word[0] = id;
 	}
-	else	//±ê×¼Ö¡³õÊ¼»¯Ö¡Í·
+	else	//ï¿½ï¿½×¼Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 	{
 			can_tx_msg.head.bF.id.SID = 0x123;
 	}
-	can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_64;	//³¤¶È²Î¿¼¡°CAN_DLC¡±¶¨Òå£¬²»¿ÉÒÔÌî¶¨ÒåÀïÃ»ÓÐµÄ²ÎÊý
+	can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_64;	//ï¿½ï¿½ï¿½È²Î¿ï¿½ï¿½ï¿½CAN_DLCï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¶¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ÐµÄ²ï¿½ï¿½ï¿½
 	can_tx_msg.head.bF.ctrl.IDE = 1;	// Extended CAN ID false
 	can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
-	can_tx_msg.head.bF.ctrl.BRS = TRUE;	//ÇÐ»»ËÙÂÊ£¬Ò²¾ÍÊÇÊý¾ÝÓòÆô¶¯¸ßËÙÂÊ·¢ËÍ/½ÓÊÕ
+	can_tx_msg.head.bF.ctrl.BRS = TRUE;	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 	can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD
 	for(int j=0;j<64;j++)
 	{
@@ -66,7 +66,7 @@ void send_canfd_test()
 	can_msg_transmit();
 }
 
-void send_canfd_k2_test()//´«Í³CAN
+void send_canfd_k2_test()//ï¿½ï¿½Í³CAN
 {
 	static uint8_t send_tick=0;
 	if(++send_tick>0xFF)
@@ -75,20 +75,20 @@ void send_canfd_k2_test()//´«Í³CAN
 	}
 	can_tx_msg.head.word[0] = 0;
 	can_tx_msg.head.word[1] = 0;
-	if(1) //À©Õ¹Ö¡³õÊ¼»¯Ö¡Í·
+	if(1) //ï¿½ï¿½Õ¹Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 	{
 			uint32_t id = (0x12345678)>>18 & 0x7FF;
 			id |= (0x12345678 & 0x3FFFF)<<11;
 			can_tx_msg.head.word[0] = id;
 	}
-	else	//±ê×¼Ö¡³õÊ¼»¯Ö¡Í·
+	else	//ï¿½ï¿½×¼Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 	{
 			can_tx_msg.head.bF.id.SID = 0x123;
 	}
-	can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//³¤¶È²Î¿¼¡°CAN_DLC¡±¶¨Òå£¬²»¿ÉÒÔÌî¶¨ÒåÀïÃ»ÓÐµÄ²ÎÊý
+	can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//ï¿½ï¿½ï¿½È²Î¿ï¿½ï¿½ï¿½CAN_DLCï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¶¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ÐµÄ²ï¿½ï¿½ï¿½
 	can_tx_msg.head.bF.ctrl.IDE = 1;	// Extended CAN ID false
 	can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
-	can_tx_msg.head.bF.ctrl.BRS = FALSE;	//ÇÐ»»ËÙÂÊ£¬Ò²¾ÍÊÇÊý¾ÝÓòÆô¶¯¸ßËÙÂÊ·¢ËÍ/½ÓÊÕ
+	can_tx_msg.head.bF.ctrl.BRS = FALSE;	//ï¿½Ð»ï¿½ï¿½ï¿½ï¿½Ê£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê·ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½
 	can_tx_msg.head.bF.ctrl.FDF = FALSE;	//TRUE->CAN FD
 	for(int j=0;j<8;j++)
 	{
@@ -107,20 +107,20 @@ void send_canfd_k3_test()
 	}
 	can_tx_msg.head.word[0] = 0;
 	can_tx_msg.head.word[1] = 0;
-	if(1) //À©Õ¹Ö¡³õÊ¼»¯Ö¡Í·
+	if(1) //ï¿½ï¿½Õ¹Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 	{
 			uint32_t id = (0x12345678)>>18 & 0x7FF;
 			id |= (0x12345678 & 0x3FFFF)<<11;
 			can_tx_msg.head.word[0] = id;
 	}
-	else	//±ê×¼Ö¡³õÊ¼»¯Ö¡Í·
+	else	//ï¿½ï¿½×¼Ö¡ï¿½ï¿½Ê¼ï¿½ï¿½Ö¡Í·
 	{
 			can_tx_msg.head.bF.id.SID = 0x123;
 	}
-	can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//³¤¶È²Î¿¼¡°CAN_DLC¡±¶¨Òå£¬²»¿ÉÒÔÌî¶¨ÒåÀïÃ»ÓÐµÄ²ÎÊý
+	can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8;	//ï¿½ï¿½ï¿½È²Î¿ï¿½ï¿½ï¿½CAN_DLCï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¶¨ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ÐµÄ²ï¿½ï¿½ï¿½
 	can_tx_msg.head.bF.ctrl.IDE = 1;	// Extended CAN ID false
 	can_tx_msg.head.bF.ctrl.RTR = 0;	// Remote frame
-	can_tx_msg.head.bF.ctrl.BRS = TRUE;	//BRS(Bit Rate Switch)Î»ËÙÂÊ×ª»»¿ª¹Ø£¬µ±BRSÎªÏÔÐÔÎ»Ê±Êý¾Ý¶ÎµÄÎ»ËÙÂÊÓëÖÙ²Ã¶ÎµÄÎ»ËÙÂÊÒ»ÖÂ£¬µ±BRSÎªÒþÐÔÎ»Ê±Êý¾Ý¶ÎµÄÎ»ËÙÂÊ¸ßÓÚÖÙ²Ã¶ÎµÄÎ»ËÙÂÊ
+	can_tx_msg.head.bF.ctrl.BRS = TRUE;	//BRS(Bit Rate Switch)Î»ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ø£ï¿½ï¿½ï¿½BRSÎªï¿½ï¿½ï¿½ï¿½Î»Ê±ï¿½ï¿½ï¿½Ý¶Îµï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù²Ã¶Îµï¿½Î»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Â£ï¿½ï¿½ï¿½BRSÎªï¿½ï¿½ï¿½ï¿½Î»Ê±ï¿½ï¿½ï¿½Ý¶Îµï¿½Î»ï¿½ï¿½ï¿½Ê¸ï¿½ï¿½ï¿½ï¿½Ù²Ã¶Îµï¿½Î»ï¿½ï¿½ï¿½ï¿½
 	can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD
 	for(int j=0;j<8;j++)
 	{
@@ -154,6 +154,8 @@ void process_key()
 				{
 					vol_data -= 0x10;
 				}
+				
+				vol_data_test = 0xAA;
 				//send_canfd_test();
       }
       IN3_3=0;
@@ -177,7 +179,7 @@ void process_key()
 					{
 						vol_data = 0xF1;
 					}
-					
+					vol_data_test = 0xA0;
 					//send_canfd_k2_test();
         }
         IN4_3=0;
@@ -196,6 +198,7 @@ void process_key()
           printf("k3 press\r\n");
 					
 					vol_data = 0x61;
+					vol_data_test = 0x00;
 					//send_canfd_k3_test();
         }
         IN5_3=0;
@@ -205,7 +208,7 @@ void process_key()
 	
 }
 
-/********************************×´Ì¬Ö¸Ê¾µÆ****************************************/
+/********************************×´Ì¬Ö¸Ê¾ï¿½ï¿½****************************************/
 void status_led_shake()
 {
 		static uint32_t led_status_cout=0;

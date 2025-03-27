@@ -12,6 +12,7 @@ filename : main.h
 #include "dev_can.h"
 
 extern int vol_data;
+extern int vol_data_test;
 
 
 #endif

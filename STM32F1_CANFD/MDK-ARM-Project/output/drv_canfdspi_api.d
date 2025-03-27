@@ -1,9 +1,9 @@
 .\output\drv_canfdspi_api.o: ..\Driver\canfdspi\drv_canfdspi_api.c
 .\output\drv_canfdspi_api.o: ..\Driver\canfdspi\drv_canfdspi_api.h
-.\output\drv_canfdspi_api.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdint.h
-.\output\drv_canfdspi_api.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdbool.h
-.\output\drv_canfdspi_api.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stddef.h
-.\output\drv_canfdspi_api.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdlib.h
+.\output\drv_canfdspi_api.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\drv_canfdspi_api.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\output\drv_canfdspi_api.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\drv_canfdspi_api.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\output\drv_canfdspi_api.o: ..\Driver\canfdspi\drv_canfdspi_defines.h
 .\output\drv_canfdspi_api.o: ..\Driver\canfdspi\drv_canfdspi_register.h
 .\output\drv_canfdspi_api.o: ..\Driver\drv_spi_mcp2517fd.h
