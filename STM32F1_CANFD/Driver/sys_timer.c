@@ -145,7 +145,7 @@ void process_key()
       {
         printf("k1 press\r\n");
 				
-				
+		
 				if(vol_data <= 0x01)
 				{
 					vol_data = 0x01;
@@ -154,9 +154,12 @@ void process_key()
 				{
 					vol_data -= 0x10;
 				}
-				
+
+								
 				vol_data_test = 0xAA;
+
 				//send_canfd_test();
+
       }
       IN3_3=0;
     }
@@ -179,7 +182,10 @@ void process_key()
 					{
 						vol_data = 0xF1;
 					}
-					vol_data_test = 0xA0;
+
+				
+			//vol_data = 0x61;
+			vol_data_test = 0xA0;
 					//send_canfd_k2_test();
         }
         IN4_3=0;
@@ -196,11 +202,12 @@ void process_key()
         if(IN5_3>=10&&IN5_3<3000)
         {
           printf("k3 press\r\n");
+
 					
-					vol_data = 0x61;
 					vol_data_test = 0x00;
 					//send_canfd_k3_test();
-        }
+
+					}
         IN5_3=0;
       }
       IN5_1=IN5_2;

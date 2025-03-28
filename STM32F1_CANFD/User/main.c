@@ -46,10 +46,13 @@ int main(void)
     can_tx_msg.head.word[0] = 0;
     can_tx_msg.head.word[1] = 0;
 
+    can_msg_transmit();
+
 		
 		while(1)
 		{
-			for(j = 0; j < 8; j++)  //YANG: wakeup message
+            etk_can_init(CAN_500K_2M);		// YANG: changed to 500K/2M  ���ݲ�����500K  CANFD��ʼ�� //���������ʲο���CAN_BITTIME_SETUP������������ò�����û������Ҫ����MCP2518FD�����ֲ���������
+			for(j = 0; j < 4; j++)  //YANG: wakeup message
             {
 
 							    if(0) //IDE initialize  YANG:IDE not used, set to faulse
@@ -70,14 +73,17 @@ int main(void)
 									can_tx_msg.head.bF.ctrl.FDF = TRUE;	// CAN FD							
 							
 								can_tx_msg.dat[0] = d;
-
+                                can_tx_msg.dat[1] = d;
+                                can_tx_msg.dat[2] = d;
+                                can_tx_msg.dat[3] = d;
+                                delay_10ms(2);
             }
 
             can_msg_transmit();
 			
 			delay_10ms(10);
 
-						for(j = 0; j < 8; j++)   //YANG: VOL setting message
+						for(j = 0; j < 3; j++)   //YANG: VOL setting message
             {
 							if(0) //��չ֡��ʼ��֡ͷ  YANG:IDE not used, set to faulse
 									{
@@ -98,7 +104,14 @@ int main(void)
 							
 							
 									can_tx_msg.dat[0] = vol_data;
-                                    can_tx_msg.dat[1] = vol_data_test;  //YANG: Adjustable volumn data vol_data. Controlled by external key.
+                                    can_tx_msg.dat[1] = 0x00;
+                                    //can_tx_msg.dat[2] = 0x00; 
+                                    //can_tx_msg.dat[3] = 0x22; 
+                                    //can_tx_msg.dat[4] = 0x22; 
+                                    //can_tx_msg.dat[5] = 0x22; 
+                                    //can_tx_msg.dat[6] = 0x22; 
+                                    //can_tx_msg.dat[7] = 0x22; 
+                                    //can_tx_msg.dat[8] = 0x22;  //YANG: Adjustable volumn data vol_data. Controlled by external key.
 
             }
 

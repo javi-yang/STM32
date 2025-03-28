@@ -1,4 +1,2 @@
-*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Program Files (x86)\Keil\ARM\ARMCC\Bin'
-Build target 'CANFD-TEST'
-".\output\CANFD_TEST.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:01
+Load "d:\\Projects\\GitHub\\STM32\\STM32F1_CANFD\\MDK-ARM-Project\\output\\CANFD_TEST.axf" 
+Erase Done.Programming Done.Verify OK.Flash Load finished at 10:43:20
