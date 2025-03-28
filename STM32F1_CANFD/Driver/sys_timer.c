@@ -156,7 +156,7 @@ void process_key()
 				}
 
 								
-				vol_data_test = 0xAA;
+				//vol_data_test = 0xAA;
 
 				//send_canfd_test();
 
@@ -185,7 +185,7 @@ void process_key()
 
 				
 			//vol_data = 0x61;
-			vol_data_test = 0xA0;
+			//vol_data_test = 0x00;
 					//send_canfd_k2_test();
         }
         IN4_3=0;
@@ -204,7 +204,8 @@ void process_key()
           printf("k3 press\r\n");
 
 					
-					vol_data_test = 0x00;
+					vol_data_test = 0x01;
+					
 					//send_canfd_k3_test();
 
 					}

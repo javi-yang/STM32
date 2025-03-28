@@ -22,7 +22,7 @@ uint16_t d = 0x61;
 
 int vol_data = 0x61;
 
-int vol_data_test = 0xA1;
+int vol_data_test = 0x00;
 
 
 CANFD_RX_MSG can_rx_msg;
@@ -104,7 +104,7 @@ int main(void)
 							
 							
 									can_tx_msg.dat[0] = vol_data;
-                                    can_tx_msg.dat[1] = 0x00;
+                                    can_tx_msg.dat[1] = vol_data_test;
                                     //can_tx_msg.dat[2] = 0x00; 
                                     //can_tx_msg.dat[3] = 0x22; 
                                     //can_tx_msg.dat[4] = 0x22; 
