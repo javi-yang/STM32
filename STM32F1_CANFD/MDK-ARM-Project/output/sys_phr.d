@@ -1,7 +1,7 @@
 .\output\sys_phr.o: ..\Driver\sys_phr.c
 .\output\sys_phr.o: ..\Common\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\output\sys_phr.o: ..\Common\CMSIS\CM3\CoreSupport\core_cm3.h
-.\output\sys_phr.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\sys_phr.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\sys_phr.o: ..\Common\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\output\sys_phr.o: ..\User\stm32f10x_conf.h
 .\output\sys_phr.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -28,8 +28,8 @@
 .\output\sys_phr.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\output\sys_phr.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\output\sys_phr.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\output\sys_phr.o: D:\Program Files\ARM\ARMCC\Bin\..\include\cstdlib
-.\output\sys_phr.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdlib.h
+.\output\sys_phr.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\cstdlib
+.\output\sys_phr.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\output\sys_phr.o: ..\Driver\drv_spi_mcp2517fd.h
 .\output\sys_phr.o: ..\Driver\delay.h
 .\output\sys_phr.o: ..\Driver\sys_timer.h

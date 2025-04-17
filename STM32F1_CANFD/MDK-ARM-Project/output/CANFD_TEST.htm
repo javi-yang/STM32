@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\CANFD_TEST.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\CANFD_TEST.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Mar 31 17:53:03 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Apr 17 19:41:30 2025
 <BR><P>
 <H3>Maximum Stack Usage =        328 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -72,7 +72,7 @@ Function Pointers
  <LI><a href="#[5]">UsageFault_Handler</a> from stm32f10x_it.o(i.UsageFault_Handler) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[a]">WWDG_IRQHandler</a> from startup_stm32f10x_md.o(.text) referenced from startup_stm32f10x_md.o(RESET)
  <LI><a href="#[37]">__main</a> from entry.o(.ARM.Collect$$$$00000000) referenced from startup_stm32f10x_md.o(.text)
- <LI><a href="#[38]">fputc</a> from bsp_usart.o(i.fputc) referenced from printfb.o(i.__0printf$bare)
+ <LI><a href="#[38]">fputc</a> from bsp_usart.o(i.fputc) referenced from printf5.o(i.__0printf$5)
  <LI><a href="#[35]">main</a> from main.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P>
@@ -82,25 +82,25 @@ Global Symbols
 <P><STRONG><a name="[37]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
-<P><STRONG><a name="[98]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[9b]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[39]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[3b]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[3e]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[99]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[9c]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[9a]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[9d]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[9b]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[9e]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[9c]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[9f]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[9d]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[a0]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
@@ -232,414 +232,433 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_md.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[80]"></a>rand</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, rand.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
+<P><STRONG><a name="[83]"></a>rand</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, rand.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
 </UL>
 
-<P><STRONG><a name="[9e]"></a>srand</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rand.o(.text), UNUSED)
+<P><STRONG><a name="[a1]"></a>srand</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rand.o(.text), UNUSED)
+
+<P><STRONG><a name="[3b]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
 
 <P><STRONG><a name="[3a]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[9f]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[a2]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[3d]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+</UL>
+
+<P><STRONG><a name="[a3]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+
+<P><STRONG><a name="[3c]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+</UL>
+
+<P><STRONG><a name="[a4]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[4]"></a>BusFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.BusFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[3c]"></a>DRV_CANFDSPI_BitTimeConfigure</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigure))
+<P><STRONG><a name="[3f]"></a>DRV_CANFDSPI_BitTimeConfigure</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigure &rArr; DRV_CANFDSPI_BitTimeConfigureData40MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal40MHz
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal20MHz
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal10MHz
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData40MHz
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData20MHz
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData10MHz
+<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal40MHz
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal20MHz
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal10MHz
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData40MHz
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData20MHz
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData10MHz
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[42]"></a>DRV_CANFDSPI_BitTimeConfigureData10MHz</STRONG> (Thumb, 540 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureData10MHz))
+<P><STRONG><a name="[45]"></a>DRV_CANFDSPI_BitTimeConfigureData10MHz</STRONG> (Thumb, 540 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureData10MHz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigureData10MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
 
-<P><STRONG><a name="[40]"></a>DRV_CANFDSPI_BitTimeConfigureData20MHz</STRONG> (Thumb, 788 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureData20MHz))
+<P><STRONG><a name="[43]"></a>DRV_CANFDSPI_BitTimeConfigureData20MHz</STRONG> (Thumb, 788 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureData20MHz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigureData20MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
 
-<P><STRONG><a name="[3e]"></a>DRV_CANFDSPI_BitTimeConfigureData40MHz</STRONG> (Thumb, 1120 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureData40MHz))
+<P><STRONG><a name="[41]"></a>DRV_CANFDSPI_BitTimeConfigureData40MHz</STRONG> (Thumb, 1120 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureData40MHz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigureData40MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
 
-<P><STRONG><a name="[41]"></a>DRV_CANFDSPI_BitTimeConfigureNominal10MHz</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureNominal10MHz))
+<P><STRONG><a name="[44]"></a>DRV_CANFDSPI_BitTimeConfigureNominal10MHz</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureNominal10MHz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigureNominal10MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
 
-<P><STRONG><a name="[3f]"></a>DRV_CANFDSPI_BitTimeConfigureNominal20MHz</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureNominal20MHz))
+<P><STRONG><a name="[42]"></a>DRV_CANFDSPI_BitTimeConfigureNominal20MHz</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureNominal20MHz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigureNominal20MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
 
-<P><STRONG><a name="[3d]"></a>DRV_CANFDSPI_BitTimeConfigureNominal40MHz</STRONG> (Thumb, 270 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureNominal40MHz))
+<P><STRONG><a name="[40]"></a>DRV_CANFDSPI_BitTimeConfigureNominal40MHz</STRONG> (Thumb, 270 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_BitTimeConfigureNominal40MHz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_BitTimeConfigureNominal40MHz &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
 
-<P><STRONG><a name="[44]"></a>DRV_CANFDSPI_Configure</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_Configure))
+<P><STRONG><a name="[47]"></a>DRV_CANFDSPI_Configure</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_Configure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_Configure &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[89]"></a>DRV_CANFDSPI_ConfigureObjectReset</STRONG> (Thumb, 156 bytes, Stack size 8 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ConfigureObjectReset))
+<P><STRONG><a name="[8c]"></a>DRV_CANFDSPI_ConfigureObjectReset</STRONG> (Thumb, 156 bytes, Stack size 8 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ConfigureObjectReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DRV_CANFDSPI_ConfigureObjectReset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[5f]"></a>DRV_CANFDSPI_DlcToDataBytes</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_DlcToDataBytes))
-<BR><BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_transmit_msg
+<P><STRONG><a name="[62]"></a>DRV_CANFDSPI_DlcToDataBytes</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_DlcToDataBytes))
+<BR><BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_transmit_msg
 </UL>
 
-<P><STRONG><a name="[45]"></a>DRV_CANFDSPI_EccEnable</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_EccEnable))
+<P><STRONG><a name="[48]"></a>DRV_CANFDSPI_EccEnable</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_EccEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = DRV_CANFDSPI_EccEnable &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[48]"></a>DRV_CANFDSPI_FilterMaskConfigure</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_FilterMaskConfigure))
+<P><STRONG><a name="[4b]"></a>DRV_CANFDSPI_FilterMaskConfigure</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_FilterMaskConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_FilterMaskConfigure &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[49]"></a>DRV_CANFDSPI_FilterObjectConfigure</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_FilterObjectConfigure))
+<P><STRONG><a name="[4c]"></a>DRV_CANFDSPI_FilterObjectConfigure</STRONG> (Thumb, 48 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_FilterObjectConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_FilterObjectConfigure &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[4a]"></a>DRV_CANFDSPI_FilterToFifoLink</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_FilterToFifoLink))
+<P><STRONG><a name="[4d]"></a>DRV_CANFDSPI_FilterToFifoLink</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_FilterToFifoLink))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_FilterToFifoLink &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[4b]"></a>DRV_CANFDSPI_GpioModeConfigure</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_GpioModeConfigure))
+<P><STRONG><a name="[4e]"></a>DRV_CANFDSPI_GpioModeConfigure</STRONG> (Thumb, 88 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_GpioModeConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_GpioModeConfigure &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[4c]"></a>DRV_CANFDSPI_ModuleEventEnable</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ModuleEventEnable))
+<P><STRONG><a name="[4f]"></a>DRV_CANFDSPI_ModuleEventEnable</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ModuleEventEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_ModuleEventEnable &rArr; DRV_CANFDSPI_WriteHalfWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteHalfWord
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadHalfWord
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteHalfWord
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadHalfWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[4f]"></a>DRV_CANFDSPI_OperationModeSelect</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_OperationModeSelect))
+<P><STRONG><a name="[52]"></a>DRV_CANFDSPI_OperationModeSelect</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_OperationModeSelect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = DRV_CANFDSPI_OperationModeSelect &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[50]"></a>DRV_CANFDSPI_RamInit</STRONG> (Thumb, 76 bytes, Stack size 120 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_RamInit))
+<P><STRONG><a name="[53]"></a>DRV_CANFDSPI_RamInit</STRONG> (Thumb, 76 bytes, Stack size 120 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_RamInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = DRV_CANFDSPI_RamInit &rArr; DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[46]"></a>DRV_CANFDSPI_ReadByte</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadByte))
+<P><STRONG><a name="[49]"></a>DRV_CANFDSPI_ReadByte</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = DRV_CANFDSPI_ReadByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelEventGet
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampModeConfigure
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampEnable
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelEventEnable
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_OperationModeSelect
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_GpioModeConfigure
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_EccEnable
+<BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelEventGet
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampModeConfigure
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampEnable
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelEventEnable
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_OperationModeSelect
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_GpioModeConfigure
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_EccEnable
 </UL>
 
-<P><STRONG><a name="[53]"></a>DRV_CANFDSPI_ReadByteArray</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadByteArray))
+<P><STRONG><a name="[56]"></a>DRV_CANFDSPI_ReadByteArray</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadByteArray))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DRV_CANFDSPI_ReadByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
 </UL>
 
-<P><STRONG><a name="[4d]"></a>DRV_CANFDSPI_ReadHalfWord</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadHalfWord))
+<P><STRONG><a name="[50]"></a>DRV_CANFDSPI_ReadHalfWord</STRONG> (Thumb, 92 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadHalfWord))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DRV_CANFDSPI_ReadHalfWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ModuleEventEnable
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ModuleEventEnable
 </UL>
 
-<P><STRONG><a name="[54]"></a>DRV_CANFDSPI_ReadWordArray</STRONG> (Thumb, 144 bytes, Stack size 56 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadWordArray))
+<P><STRONG><a name="[57]"></a>DRV_CANFDSPI_ReadWordArray</STRONG> (Thumb, 144 bytes, Stack size 56 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReadWordArray))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_ReadWordArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
 </UL>
 
-<P><STRONG><a name="[55]"></a>DRV_CANFDSPI_ReceiveChannelConfigure</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReceiveChannelConfigure))
+<P><STRONG><a name="[58]"></a>DRV_CANFDSPI_ReceiveChannelConfigure</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReceiveChannelConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_ReceiveChannelConfigure &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[8b]"></a>DRV_CANFDSPI_ReceiveChannelConfigureObjectReset</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset))
+<P><STRONG><a name="[8e]"></a>DRV_CANFDSPI_ReceiveChannelConfigureObjectReset</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReceiveChannelConfigureObjectReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DRV_CANFDSPI_ReceiveChannelConfigureObjectReset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[56]"></a>DRV_CANFDSPI_ReceiveChannelEventEnable</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReceiveChannelEventEnable))
+<P><STRONG><a name="[59]"></a>DRV_CANFDSPI_ReceiveChannelEventEnable</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_ReceiveChannelEventEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_ReceiveChannelEventEnable &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[57]"></a>DRV_CANFDSPI_Reset</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_Reset))
+<P><STRONG><a name="[5a]"></a>DRV_CANFDSPI_Reset</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_Reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = DRV_CANFDSPI_Reset &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[58]"></a>DRV_CANFDSPI_TimeStampEnable</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampEnable))
+<P><STRONG><a name="[5b]"></a>DRV_CANFDSPI_TimeStampEnable</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = DRV_CANFDSPI_TimeStampEnable &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[59]"></a>DRV_CANFDSPI_TimeStampModeConfigure</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampModeConfigure))
+<P><STRONG><a name="[5c]"></a>DRV_CANFDSPI_TimeStampModeConfigure</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampModeConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = DRV_CANFDSPI_TimeStampModeConfigure &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[5a]"></a>DRV_CANFDSPI_TimeStampPrescalerSet</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampPrescalerSet))
+<P><STRONG><a name="[5d]"></a>DRV_CANFDSPI_TimeStampPrescalerSet</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampPrescalerSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = DRV_CANFDSPI_TimeStampPrescalerSet &rArr; DRV_CANFDSPI_WriteHalfWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteHalfWord
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteHalfWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[5b]"></a>DRV_CANFDSPI_TimeStampSet</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampSet))
+<P><STRONG><a name="[5e]"></a>DRV_CANFDSPI_TimeStampSet</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TimeStampSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = DRV_CANFDSPI_TimeStampSet &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[5c]"></a>DRV_CANFDSPI_TransmitChannelConfigure</STRONG> (Thumb, 116 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelConfigure))
+<P><STRONG><a name="[5f]"></a>DRV_CANFDSPI_TransmitChannelConfigure</STRONG> (Thumb, 116 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = DRV_CANFDSPI_TransmitChannelConfigure &rArr; DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[8a]"></a>DRV_CANFDSPI_TransmitChannelConfigureObjectReset</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelConfigureObjectReset))
+<P><STRONG><a name="[8d]"></a>DRV_CANFDSPI_TransmitChannelConfigureObjectReset</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelConfigureObjectReset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DRV_CANFDSPI_TransmitChannelConfigureObjectReset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
 </UL>
 
-<P><STRONG><a name="[5d]"></a>DRV_CANFDSPI_TransmitChannelEventGet</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelEventGet))
+<P><STRONG><a name="[60]"></a>DRV_CANFDSPI_TransmitChannelEventGet</STRONG> (Thumb, 64 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelEventGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_TransmitChannelEventGet &rArr; DRV_CANFDSPI_ReadByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_transmit_check_fifo
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_transmit_check_fifo
 </UL>
 
-<P><STRONG><a name="[5e]"></a>DRV_CANFDSPI_TransmitChannelLoad</STRONG> (Thumb, 294 bytes, Stack size 160 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelLoad))
+<P><STRONG><a name="[61]"></a>DRV_CANFDSPI_TransmitChannelLoad</STRONG> (Thumb, 294 bytes, Stack size 160 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelLoad))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = DRV_CANFDSPI_TransmitChannelLoad &rArr; DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_DlcToDataBytes
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelUpdate
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadWordArray
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_DlcToDataBytes
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelUpdate
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadWordArray
 </UL>
-<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_transmit_msg
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_transmit_msg
 </UL>
 
-<P><STRONG><a name="[60]"></a>DRV_CANFDSPI_TransmitChannelUpdate</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelUpdate))
+<P><STRONG><a name="[63]"></a>DRV_CANFDSPI_TransmitChannelUpdate</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_TransmitChannelUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
 </UL>
 
-<P><STRONG><a name="[47]"></a>DRV_CANFDSPI_WriteByte</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteByte))
+<P><STRONG><a name="[4a]"></a>DRV_CANFDSPI_WriteByte</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampModeConfigure
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampEnable
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelEventEnable
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_OperationModeSelect
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_GpioModeConfigure
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterToFifoLink
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_EccEnable
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelUpdate
+<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampModeConfigure
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampEnable
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelEventEnable
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_OperationModeSelect
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_GpioModeConfigure
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterToFifoLink
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_EccEnable
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelUpdate
 </UL>
 
-<P><STRONG><a name="[51]"></a>DRV_CANFDSPI_WriteByteArray</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteByteArray))
+<P><STRONG><a name="[54]"></a>DRV_CANFDSPI_WriteByteArray</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteByteArray))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_RamInit
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
+<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_RamInit
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
 </UL>
 
-<P><STRONG><a name="[4e]"></a>DRV_CANFDSPI_WriteHalfWord</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteHalfWord))
+<P><STRONG><a name="[51]"></a>DRV_CANFDSPI_WriteHalfWord</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteHalfWord))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DRV_CANFDSPI_WriteHalfWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampPrescalerSet
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ModuleEventEnable
+<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampPrescalerSet
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ModuleEventEnable
 </UL>
 
-<P><STRONG><a name="[43]"></a>DRV_CANFDSPI_WriteWord</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteWord))
+<P><STRONG><a name="[46]"></a>DRV_CANFDSPI_WriteWord</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, drv_canfdspi_api.o(i.DRV_CANFDSPI_WriteWord))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = DRV_CANFDSPI_WriteWord &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelConfigure
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampSet
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelConfigure
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterObjectConfigure
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterMaskConfigure
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Configure
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal40MHz
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal20MHz
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal10MHz
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData40MHz
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData20MHz
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData10MHz
+<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelConfigure
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampSet
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelConfigure
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterObjectConfigure
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterMaskConfigure
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Configure
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal40MHz
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal20MHz
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureNominal10MHz
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData40MHz
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData20MHz
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigureData10MHz
 </UL>
 
-<P><STRONG><a name="[52]"></a>DRV_SPI_TransferData</STRONG> (Thumb, 26 bytes, Stack size 24 bytes, drv_spi_mcp2517fd.o(i.DRV_SPI_TransferData))
+<P><STRONG><a name="[55]"></a>DRV_SPI_TransferData</STRONG> (Thumb, 26 bytes, Stack size 24 bytes, drv_spi_mcp2517fd.o(i.DRV_SPI_TransferData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
+<BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Reset
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByteArray
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteHalfWord
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadWordArray
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadHalfWord
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Reset
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByteArray
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteWord
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteHalfWord
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByte
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadWordArray
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadHalfWord
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByte
 </UL>
 
 <P><STRONG><a name="[7]"></a>DebugMon_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.DebugMon_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[6e]"></a>GPIO_Init</STRONG> (Thumb, 278 bytes, Stack size 24 bytes, stm32f10x_gpio.o(i.GPIO_Init))
+<P><STRONG><a name="[71]"></a>GPIO_Init</STRONG> (Thumb, 278 bytes, Stack size 24 bytes, stm32f10x_gpio.o(i.GPIO_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
 </UL>
 
-<P><STRONG><a name="[6f]"></a>GPIO_PinRemapConfig</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, stm32f10x_gpio.o(i.GPIO_PinRemapConfig))
+<P><STRONG><a name="[72]"></a>GPIO_PinRemapConfig</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, stm32f10x_gpio.o(i.GPIO_PinRemapConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_PinRemapConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
+<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
 </UL>
 
-<P><STRONG><a name="[93]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadInputDataBit))
-<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
+<P><STRONG><a name="[96]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ReadInputDataBit))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
 </UL>
 
-<P><STRONG><a name="[95]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;status_led_shake
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
+<P><STRONG><a name="[98]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_ResetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;status_led_shake
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
 </UL>
 
-<P><STRONG><a name="[94]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
-<BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;status_led_shake
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
+<P><STRONG><a name="[97]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(i.GPIO_SetBits))
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;status_led_shake
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
 </UL>
 
 <P><STRONG><a name="[2]"></a>HardFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.HardFault_Handler))
@@ -651,76 +670,76 @@ Global Symbols
 <P><STRONG><a name="[1]"></a>NMI_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.NMI_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[64]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
+<P><STRONG><a name="[67]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(i.NVIC_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
 </UL>
 
-<P><STRONG><a name="[63]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
+<P><STRONG><a name="[66]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(i.NVIC_PriorityGroupConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
 </UL>
 
-<P><STRONG><a name="[62]"></a>NVIC_config</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, bsp_usart.o(i.NVIC_config))
+<P><STRONG><a name="[65]"></a>NVIC_config</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, bsp_usart.o(i.NVIC_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = NVIC_config &rArr; USART_ITConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
 <P><STRONG><a name="[8]"></a>PendSV_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.PendSV_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[70]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
-<BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
+<P><STRONG><a name="[73]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd))
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7c]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 192 bytes, Stack size 12 bytes, stm32f10x_rcc.o(i.RCC_GetClocksFreq))
+<P><STRONG><a name="[7f]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 192 bytes, Stack size 12 bytes, stm32f10x_rcc.o(i.RCC_GetClocksFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = RCC_GetClocksFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
-<P><STRONG><a name="[66]"></a>SPI1_ReadWriteByte</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, drv_spi_mcp2517fd.o(i.SPI1_ReadWriteByte))
+<P><STRONG><a name="[69]"></a>SPI1_ReadWriteByte</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, drv_spi_mcp2517fd.o(i.SPI1_ReadWriteByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_ReceiveData
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_ReceiveData
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
-</UL>
-
-<P><STRONG><a name="[83]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
+<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_master_transfer
 </UL>
 
-<P><STRONG><a name="[67]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
+<P><STRONG><a name="[86]"></a>SPI_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
 </UL>
 
-<P><STRONG><a name="[69]"></a>SPI_I2S_ReceiveData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_ReceiveData))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
+<P><STRONG><a name="[6a]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_GetFlagStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
 </UL>
 
-<P><STRONG><a name="[68]"></a>SPI_I2S_SendData</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_SendData))
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
+<P><STRONG><a name="[6c]"></a>SPI_I2S_ReceiveData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_ReceiveData))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
 </UL>
 
-<P><STRONG><a name="[82]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_spi.o(i.SPI_Init))
+<P><STRONG><a name="[6b]"></a>SPI_I2S_SendData</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_spi.o(i.SPI_I2S_SendData))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
+</UL>
+
+<P><STRONG><a name="[85]"></a>SPI_Init</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, stm32f10x_spi.o(i.SPI_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, stm32f10x_it.o(i.SVC_Handler))
@@ -729,23 +748,23 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, stm32f10x_it.o(i.SysTick_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTick_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimingDelay_Decrement
+<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimingDelay_Decrement
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
 <P><STRONG><a name="[36]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SystemInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(.text)
 </UL>
-<P><STRONG><a name="[6d]"></a>System_Phr_Init</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, sys_phr.o(i.System_Phr_Init))
+<P><STRONG><a name="[70]"></a>System_Phr_Init</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, sys_phr.o(i.System_Phr_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = System_Phr_Init &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinRemapConfig
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinRemapConfig
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -753,292 +772,292 @@ Global Symbols
 <P><STRONG><a name="[23]"></a>TIM1_UP_IRQHandler</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, sys_timer.o(i.TIM1_UP_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = TIM1_UP_IRQHandler &rArr; TIM_GetITStatus
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearFlag
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;status_led_shake
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
+<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearFlag
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;status_led_shake
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[72]"></a>TIM_ClearFlag</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_ClearFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<P><STRONG><a name="[75]"></a>TIM_ClearFlag</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_ClearFlag))
+<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
 <LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_IRQHandler
 </UL>
 
-<P><STRONG><a name="[78]"></a>TIM_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<P><STRONG><a name="[7b]"></a>TIM_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
 </UL>
 
-<P><STRONG><a name="[71]"></a>TIM_GetITStatus</STRONG> (Thumb, 34 bytes, Stack size 12 bytes, stm32f10x_tim.o(i.TIM_GetITStatus))
+<P><STRONG><a name="[74]"></a>TIM_GetITStatus</STRONG> (Thumb, 34 bytes, Stack size 12 bytes, stm32f10x_tim.o(i.TIM_GetITStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_GetITStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_IRQHandler
 </UL>
 
-<P><STRONG><a name="[77]"></a>TIM_ITConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_ITConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<P><STRONG><a name="[7a]"></a>TIM_ITConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_ITConfig))
+<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
 </UL>
 
-<P><STRONG><a name="[76]"></a>TIM_TimeBaseInit</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_TimeBaseInit))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<P><STRONG><a name="[79]"></a>TIM_TimeBaseInit</STRONG> (Thumb, 122 bytes, Stack size 0 bytes, stm32f10x_tim.o(i.TIM_TimeBaseInit))
+<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
 </UL>
 
-<P><STRONG><a name="[75]"></a>Timer1_Config</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, sys_timer.o(i.Timer1_Config))
+<P><STRONG><a name="[78]"></a>Timer1_Config</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, sys_timer.o(i.Timer1_Config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Timer1_Config &rArr; NVIC_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearFlag
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearFlag
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6c]"></a>TimingDelay_Decrement</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, delay.o(i.TimingDelay_Decrement))
+<P><STRONG><a name="[6f]"></a>TimingDelay_Decrement</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, delay.o(i.TimingDelay_Decrement))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
 </UL>
 
 <P><STRONG><a name="[2f]"></a>USART1_IRQHandler</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, bsp_usart.o(i.USART1_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USART1_IRQHandler &rArr; USART_GetITStatus
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[96]"></a>USART_ClearFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_ClearFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<P><STRONG><a name="[99]"></a>USART_ClearFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_ClearFlag))
+<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
-<P><STRONG><a name="[97]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_Cmd))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<P><STRONG><a name="[9a]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_Cmd))
+<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
-<P><STRONG><a name="[8e]"></a>USART_GetFlagStatus</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_GetFlagStatus))
+<P><STRONG><a name="[91]"></a>USART_GetFlagStatus</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_GetFlagStatus))
 <BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[79]"></a>USART_GetITStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f10x_usart.o(i.USART_GetITStatus))
+<P><STRONG><a name="[7c]"></a>USART_GetITStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f10x_usart.o(i.USART_GetITStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART_GetITStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[65]"></a>USART_ITConfig</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, stm32f10x_usart.o(i.USART_ITConfig))
+<P><STRONG><a name="[68]"></a>USART_ITConfig</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, stm32f10x_usart.o(i.USART_ITConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USART_ITConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
 </UL>
 
-<P><STRONG><a name="[7b]"></a>USART_Init</STRONG> (Thumb, 210 bytes, Stack size 56 bytes, stm32f10x_usart.o(i.USART_Init))
+<P><STRONG><a name="[7e]"></a>USART_Init</STRONG> (Thumb, 210 bytes, Stack size 56 bytes, stm32f10x_usart.o(i.USART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
 </UL>
 
-<P><STRONG><a name="[7a]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_ReceiveData))
+<P><STRONG><a name="[7d]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_ReceiveData))
 <BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8f]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_SendData))
+<P><STRONG><a name="[92]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_usart.o(i.USART_SendData))
 <BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
 <P><STRONG><a name="[5]"></a>UsageFault_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_it.o(i.UsageFault_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_md.o(RESET)
 </UL>
-<P><STRONG><a name="[7d]"></a>__0printf$bare</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[80]"></a>__0printf$5</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[a0]"></a>__1printf$bare</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
+<P><STRONG><a name="[a5]"></a>__1printf$5</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5), UNUSED)
 
-<P><STRONG><a name="[91]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare))
-<BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;process_key
-</UL>
-
-<P><STRONG><a name="[a1]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
-
-<P><STRONG><a name="[a2]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[a3]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
-
-<P><STRONG><a name="[7f]"></a>can1_test_ram_access</STRONG> (Thumb, 118 bytes, Stack size 144 bytes, dev_can.o(i.can1_test_ram_access))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = can1_test_ram_access &rArr; DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
-</UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByteArray
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
-</UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_self_test
-</UL>
-
-<P><STRONG><a name="[81]"></a>can_hd_spi_port_init</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, drv_spi_mcp2517fd.o(i.can_hd_spi_port_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = can_hd_spi_port_init &rArr; SPI_Init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
-</UL>
-
-<P><STRONG><a name="[84]"></a>can_msg_transmit</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, main.o(i.can_msg_transmit))
-<BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = can_msg_transmit &rArr; can_transmit_msg &rArr; DRV_CANFDSPI_TransmitChannelLoad &rArr; DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
-</UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_transmit_check_fifo
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_transmit_msg
+<P><STRONG><a name="[94]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printf5.o(i.__0printf$5))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[87]"></a>can_self_test</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, dev_can.o(i.can_self_test))
+<P><STRONG><a name="[a6]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[a7]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[a8]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[82]"></a>can1_test_ram_access</STRONG> (Thumb, 118 bytes, Stack size 144 bytes, dev_can.o(i.can1_test_ram_access))
+<BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = can1_test_ram_access &rArr; DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_WriteByteArray
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReadByteArray
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rand
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_self_test
+</UL>
+
+<P><STRONG><a name="[84]"></a>can_hd_spi_port_init</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, drv_spi_mcp2517fd.o(i.can_hd_spi_port_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = can_hd_spi_port_init &rArr; SPI_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Init
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Cmd
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
+</UL>
+
+<P><STRONG><a name="[87]"></a>can_msg_transmit</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, main.o(i.can_msg_transmit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = can_msg_transmit &rArr; can_transmit_msg &rArr; DRV_CANFDSPI_TransmitChannelLoad &rArr; DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
+</UL>
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_transmit_check_fifo
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_transmit_msg
+</UL>
+<BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[8a]"></a>can_self_test</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, dev_can.o(i.can_self_test))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = can_self_test &rArr; can1_test_ram_access &rArr; DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can1_test_ram_access
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
 </UL>
 
-<P><STRONG><a name="[86]"></a>can_transmit_msg</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, dev_can.o(i.can_transmit_msg))
+<P><STRONG><a name="[89]"></a>can_transmit_msg</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, dev_can.o(i.can_transmit_msg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = can_transmit_msg &rArr; DRV_CANFDSPI_TransmitChannelLoad &rArr; DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_DlcToDataBytes
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelLoad
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_DlcToDataBytes
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
 </UL>
 
-<P><STRONG><a name="[88]"></a>canfd_cfg_init</STRONG> (Thumb, 334 bytes, Stack size 32 bytes, dev_can.o(i.canfd_cfg_init))
+<P><STRONG><a name="[8b]"></a>canfd_cfg_init</STRONG> (Thumb, 334 bytes, Stack size 32 bytes, dev_can.o(i.canfd_cfg_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = canfd_cfg_init &rArr; DRV_CANFDSPI_RamInit &rArr; DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelConfigureObjectReset
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelConfigure
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampSet
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampPrescalerSet
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampModeConfigure
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampEnable
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Reset
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelEventEnable
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelConfigureObjectReset
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelConfigure
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_RamInit
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_OperationModeSelect
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ModuleEventEnable
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_GpioModeConfigure
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterToFifoLink
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterObjectConfigure
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterMaskConfigure
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_EccEnable
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ConfigureObjectReset
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Configure
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelConfigureObjectReset
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelConfigure
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampSet
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampPrescalerSet
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampModeConfigure
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TimeStampEnable
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Reset
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelEventEnable
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelConfigureObjectReset
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ReceiveChannelConfigure
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_RamInit
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_OperationModeSelect
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ModuleEventEnable
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_GpioModeConfigure
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterToFifoLink
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterObjectConfigure
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_FilterMaskConfigure
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_EccEnable
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_ConfigureObjectReset
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_Configure
+<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_BitTimeConfigure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
 </UL>
 
-<P><STRONG><a name="[92]"></a>delay_10ms</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, delay.o(i.delay_10ms))
+<P><STRONG><a name="[95]"></a>delay_10ms</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, delay.o(i.delay_10ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_10ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8c]"></a>etk_can_init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dev_can.o(i.etk_can_init))
+<P><STRONG><a name="[8f]"></a>etk_can_init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, dev_can.o(i.etk_can_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = etk_can_init &rArr; canfd_cfg_init &rArr; DRV_CANFDSPI_RamInit &rArr; DRV_CANFDSPI_WriteByteArray &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_self_test
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi1_gpio_config
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_hd_spi_port_init
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;canfd_cfg_init
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_self_test
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[85]"></a>etk_can_transmit_check_fifo</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, dev_can.o(i.etk_can_transmit_check_fifo))
+<P><STRONG><a name="[88]"></a>etk_can_transmit_check_fifo</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, dev_can.o(i.etk_can_transmit_check_fifo))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = etk_can_transmit_check_fifo &rArr; DRV_CANFDSPI_TransmitChannelEventGet &rArr; DRV_CANFDSPI_ReadByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelEventGet
+<BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_CANFDSPI_TransmitChannelEventGet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
+<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
 </UL>
 
 <P><STRONG><a name="[38]"></a>fputc</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, bsp_usart.o(i.fputc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fputc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
+<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> printfb.o(i.__0printf$bare)
+<BR>[Address Reference Count : 1]<UL><LI> printf5.o(i.__0printf$5)
 </UL>
-<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 380 bytes, Stack size 24 bytes, main.o(i.main))
+<P><STRONG><a name="[35]"></a>main</STRONG> (Thumb, 436 bytes, Stack size 24 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328<LI>Call Chain = main &rArr; can_msg_transmit &rArr; can_transmit_msg &rArr; DRV_CANFDSPI_TransmitChannelLoad &rArr; DRV_CANFDSPI_TransmitChannelUpdate &rArr; DRV_CANFDSPI_WriteByte &rArr; DRV_SPI_TransferData &rArr; spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10ms
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;usart_init
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_10ms
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer1_Config
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;System_Phr_Init
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;can_msg_transmit
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[74]"></a>process_key</STRONG> (Thumb, 388 bytes, Stack size 8 bytes, sys_timer.o(i.process_key))
+<P><STRONG><a name="[77]"></a>process_key</STRONG> (Thumb, 374 bytes, Stack size 8 bytes, sys_timer.o(i.process_key))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = process_key
 </UL>
-<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_IRQHandler
 </UL>
 
-<P><STRONG><a name="[8d]"></a>spi1_gpio_config</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, drv_spi_mcp2517fd.o(i.spi1_gpio_config))
+<P><STRONG><a name="[90]"></a>spi1_gpio_config</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, drv_spi_mcp2517fd.o(i.spi1_gpio_config))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = spi1_gpio_config &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;etk_can_init
 </UL>
 
-<P><STRONG><a name="[61]"></a>spi1_master_transfer</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, drv_spi_mcp2517fd.o(i.spi1_master_transfer))
+<P><STRONG><a name="[64]"></a>spi1_master_transfer</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, drv_spi_mcp2517fd.o(i.spi1_master_transfer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = spi1_master_transfer &rArr; SPI1_ReadWriteByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI1_ReadWriteByte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DRV_SPI_TransferData
 </UL>
 
-<P><STRONG><a name="[73]"></a>status_led_shake</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, sys_timer.o(i.status_led_shake))
+<P><STRONG><a name="[76]"></a>status_led_shake</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, sys_timer.o(i.status_led_shake))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = status_led_shake
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_UP_IRQHandler
 </UL>
 
-<P><STRONG><a name="[90]"></a>usart_init</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, bsp_usart.o(i.usart_init))
+<P><STRONG><a name="[93]"></a>usart_init</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, bsp_usart.o(i.usart_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = usart_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ClearFlag
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ClearFlag
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1046,22 +1065,24 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[6a]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
+<P><STRONG><a name="[6d]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(i.SetSysClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[6b]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
+<P><STRONG><a name="[6e]"></a>SetSysClockTo72</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f10x.o(i.SetSysClockTo72))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 
-<P><STRONG><a name="[7e]"></a>_printf_core</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, printfb.o(i._printf_core), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$bare
+<P><STRONG><a name="[81]"></a>_printf_core</STRONG> (Thumb, 658 bytes, Stack size 104 bytes, printf5.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$5
 </UL>
 <P>
 <H3>

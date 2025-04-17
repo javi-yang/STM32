@@ -143,16 +143,16 @@ void process_key()
       IN3=0;
       if(IN3_3>=10&&IN3_3<3000)
       {
-        printf("k1 press\r\n");
+        //printf("k1 press\r\n");
 				
 		
-				if(vol_data <= 0x01)
+				if(amp_vol <= 0x0001)
 				{
-					vol_data = 0x01;
+					amp_vol = 0x0001;
 				}
 				else
 				{
-					vol_data -= 0x10;
+					amp_vol -= 0x10;
 				}
 
 								
@@ -174,13 +174,13 @@ void process_key()
         IN4=0;
         if(IN4_3>=10&&IN4_3<3000)
         {
-          printf("k2 press\r\n");
+          //printf("k2 press\r\n");
 					
-					vol_data += 0x10;
+		  			amp_vol += 0x10;
 					
-					if(vol_data > 0xF1)
+					if(amp_vol > 0x01A1)
 					{
-						vol_data = 0xF1;
+						amp_vol = 0x01A1;
 					}
 
 				
@@ -201,10 +201,10 @@ void process_key()
         IN5=0;
         if(IN5_3>=10&&IN5_3<3000)
         {
-          printf("k3 press\r\n");
+          //printf("k3 press\r\n");
 
 					
-					vol_data_test = 0x01;
+					amp_vol = 0x0061;
 					
 					//send_canfd_k3_test();
 

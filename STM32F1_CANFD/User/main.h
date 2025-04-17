@@ -11,6 +11,7 @@ filename : main.h
 #include "delay.h"
 #include "dev_can.h"
 
+extern int amp_vol;
 extern int vol_data;
 extern int vol_data_test;
 

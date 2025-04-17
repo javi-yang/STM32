@@ -4,7 +4,7 @@ discript : STM32F1 CANFD driver
 time     : 2023.11.15
 �Ա����̣���ŷ����
 ���̣�ʹ��STM32F103C8T6 SPI2��MCP2518FDоƬ����ͨѶ
-Updated for AMP usage. 2025.1.7 YANG
+Updated for AMP usage. 2025.4.17 YANG
 ********************************************************************/
 
 #include "main.h"
@@ -19,9 +19,8 @@ extern uint8_t tick;
 uint16_t i = 0, j;
 uint16_t d = 0x61;
 
-int vol_data = 0x61;
+int amp_vol = 0x0071;
 
-int vol_data_test = 0x00;
 
 CANFD_RX_MSG can_rx_msg;
 CANFD_TX_MSG can_tx_msg;
@@ -33,12 +32,12 @@ int main(void)
 
     RCC_GetClocksFreq(&RCC_Clocks);
     SysTick_Config(RCC_Clocks.HCLK_Frequency / 100);
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB, ENABLE); // PORTBʱ��ʹ��
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB, ENABLE);
     System_Phr_Init();
     usart_init(115200); // ���Դ���
     Timer1_Config();
     // etk_can_init(CAN_1000K_4M);
-    etk_can_init(CAN_500K_2M); // YANG: changed to 500K/2M  ���ݲ�����500K  CANFD��ʼ�� //���������ʲο���CAN_BITTIME_SETUP������������ò�����û������Ҫ����MCP2518FD�����ֲ���������
+    etk_can_init(CAN_500K_2M); // YANG: changed to 500K/2M
     printf("STM32F1 CANFD TEST\r\n");
     delay_10ms(5);
     can_tx_msg.head.word[0] = 0;
@@ -48,15 +47,15 @@ int main(void)
 
     while (1)
     {
-        etk_can_init(CAN_500K_2M); // YANG: changed to 500K/2M  ���ݲ�����500K  CANFD��ʼ�� //���������ʲο���CAN_BITTIME_SETUP������������ò�����û������Ҫ����MCP2518FD�����ֲ���������
+        etk_can_init(CAN_500K_2M); // YANG: changed to 500K/2M
         for (j = 0; j < 5; j++)    // YANG: wakeup message
         {
             can_tx_msg.head.bF.id.SID = 0x2B0; // YANG: ID?? changed from 123 to 666
 
-            can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8; //   YANG: changed from 64 to 8  ���Ȳο���CAN_DLC�����壬�����������û�еĲ���
+            can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8; //   YANG: changed from 64 to 8  
             can_tx_msg.head.bF.ctrl.IDE = 0;         // Extended CAN ID false
             can_tx_msg.head.bF.ctrl.RTR = 0;         // Remote frame
-            can_tx_msg.head.bF.ctrl.BRS = TRUE;      // �л����ʣ�Ҳ�������������������ʷ���/����
+            can_tx_msg.head.bF.ctrl.BRS = TRUE;      
             can_tx_msg.head.bF.ctrl.FDF = TRUE;      // CAN FD
 
             can_tx_msg.dat[0] = d;
@@ -70,14 +69,14 @@ int main(void)
 
             can_tx_msg.head.bF.id.SID = 0x666;
 
-            can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8; //   YANG: changed from 64 to 8  ���Ȳο���CAN_DLC�����壬�����������û�еĲ���
+            can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8; //   YANG: changed from 64 to 8  
             can_tx_msg.head.bF.ctrl.IDE = 0;         // Extended CAN ID false
             can_tx_msg.head.bF.ctrl.RTR = 0;         // Remote frame
-            can_tx_msg.head.bF.ctrl.BRS = TRUE;      // �л����ʣ�Ҳ�������������������ʷ���/����
+            can_tx_msg.head.bF.ctrl.BRS = TRUE;      
             can_tx_msg.head.bF.ctrl.FDF = TRUE;      // CAN FD
 
-            can_tx_msg.dat[0] = vol_data;
-            can_tx_msg.dat[1] = 0x00;
+            can_tx_msg.dat[0] = amp_vol & 0x00FF; 
+            can_tx_msg.dat[1] = (amp_vol & 0xFF00) >> 8; 
 
             can_msg_transmit();
 

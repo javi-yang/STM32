@@ -2,7 +2,7 @@
 .\output\main.o: ..\User\main.h
 .\output\main.o: ..\Common\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\output\main.o: ..\Common\CMSIS\CM3\CoreSupport\core_cm3.h
-.\output\main.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\main.o: ..\Common\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\output\main.o: ..\User\stm32f10x_conf.h
 .\output\main.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -30,13 +30,13 @@
 .\output\main.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\output\main.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\misc.h
 .\output\main.o: ..\Driver\bsp_usart.h
-.\output\main.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdio.h
+.\output\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 .\output\main.o: ..\Driver\delay.h
 .\output\main.o: ..\User\dev_can.h
 .\output\main.o: ..\Driver\canfdspi\drv_canfdspi_api.h
-.\output\main.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdbool.h
-.\output\main.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stddef.h
-.\output\main.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdlib.h
+.\output\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdbool.h
+.\output\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\main.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdlib.h
 .\output\main.o: ..\Driver\canfdspi\drv_canfdspi_defines.h
 .\output\main.o: ..\Driver\canfdspi\drv_canfdspi_register.h
 .\output\main.o: ..\Driver\drv_spi_mcp2517fd.h
