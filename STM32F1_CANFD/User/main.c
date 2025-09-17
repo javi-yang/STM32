@@ -65,7 +65,7 @@ int main(void)
 
             can_msg_transmit();
 
-            delay_10ms(30);
+            delay_10ms(5);
 
             can_tx_msg.head.bF.id.SID = 0x666;
 
@@ -80,10 +80,30 @@ int main(void)
 
             can_msg_transmit();
 
-            delay_10ms(30);
+            delay_10ms(5);
 
         }
 
+        etk_can_init(CAN_500K_2M); // YANG: for BV00013A
+        for (j = 0; j < 2; j++)    // YANG: wakeup message
+        {
+            can_tx_msg.head.bF.id.SID = 0x000; // YANG: ID?? changed from 123 to 666
+
+            can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8; //   YANG: changed from 64 to 8  
+            can_tx_msg.head.bF.ctrl.IDE = 0;         // Extended CAN ID false
+            can_tx_msg.head.bF.ctrl.RTR = 0;         // Remote frame
+            can_tx_msg.head.bF.ctrl.BRS = TRUE;      
+            can_tx_msg.head.bF.ctrl.FDF = 0;      // 
+
+            can_tx_msg.dat[0] = d;
+            can_tx_msg.dat[1] = d;
+            can_tx_msg.dat[2] = d;
+            can_tx_msg.dat[3] = d;
+
+            can_msg_transmit();
+
+            delay_10ms(10);
+        }
 
     }
 }
@@ -107,13 +127,13 @@ int8_t canfd_rcv_poll(void)
 
             DRV_CANFDSPI_ReceiveMessageGet(CANFD_CH1, CAN_RX_FIFO, &can_rx_msg.head, can_rx_msg.dat, MAX_DATA_BYTES);
             res = DRV_CANFDSPI_ReceiveChannelEventGet(CANFD_CH1, CAN_RX_FIFO, &rxFlags);
-            /*
+            
                         if(res < 0)
                         {
                             res = 0;
                             break;
                         }
-            */
+            
         } while (rxFlags & CAN_RX_FIFO_NOT_EMPTY_EVENT);
 
         can_rx_flag = TRUE;
