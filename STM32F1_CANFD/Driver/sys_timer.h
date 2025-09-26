@@ -18,6 +18,10 @@
 #define LED1_GPIO_PORT                GPIOB 
 #define LED1_GPIO_CLK                 RCC_APB2Periph_GPIOB
 
+#define LED3_PIN                      GPIO_Pin_15
+#define LED3_GPIO_PORT                GPIOA
+#define LED3_GPIO_CLK                 RCC_APB2Periph_GPIOA
+
 void Timer1_Config(void);
 void TIM1_UP_IRQHandler(void);
 

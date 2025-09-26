@@ -86,18 +86,11 @@ int main(void)
             delay_10ms(5);
 
         }
-        if (can_rx_flag)
-        {
-            can_rx_flag = FALSE;
-            printf("CAN RX:");
-            for (i = 0; i < can_rx_msg.head.bF.ctrl.DLC; i++)
-            {
-                printf(" %02X", can_rx_msg.dat[i]);
-            }
-            printf("\r\n");
-        } 
+
+
         //printf("OKOKOK\r\n");
         etk_can_init(CAN_500K_2M); // YANG: for BV00013A
+        //can_int_gpio_exti_init();
         for (j = 0; j < 2; j++)    // YANG: wakeup message
         {
             can_tx_msg.head.bF.id.SID = 0x000; // YANG: ID?? changed from 123 to 666
@@ -115,7 +108,19 @@ int main(void)
 
             can_msg_transmit();
 
-            delay_10ms(10);
+            delay_10ms(5);
+
+        canfd_rcv_poll();
+        if (can_rx_flag)
+        {
+            can_rx_flag = FALSE;
+            printf("CAN RX:");
+            for (i = 0; i < can_rx_msg.head.bF.ctrl.DLC; i++)
+            {
+                printf(" %02X", can_rx_msg.dat[i]);
+            }
+            printf("\r\n");
+        } 
         }
 
     }
@@ -150,6 +155,7 @@ int8_t canfd_rcv_poll(void)
         } while (rxFlags & CAN_RX_FIFO_NOT_EMPTY_EVENT);
 
         can_rx_flag = TRUE;
+        
 
     }
 
@@ -163,3 +169,4 @@ void can_msg_transmit(void)
         can_transmit_msg(CANFD_CH1, &can_tx_msg);
     }
 }
+

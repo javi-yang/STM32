@@ -238,6 +238,19 @@ void status_led_shake()
 		}  
 }
 
+void status_led3_shake()
+{
+		if(CAN1_RX_INT())
+		{
+			
+			GPIO_ResetBits(LED3_GPIO_PORT, LED3_PIN);
+		}
+		else
+		{
+			GPIO_SetBits(LED3_GPIO_PORT, LED3_PIN);
+		}
+}
+
 /*************************1ms timer irq******************************************************/
 void TIM1_UP_IRQHandler()
 {
@@ -252,6 +265,7 @@ void TIM1_UP_IRQHandler()
 		}
 /*************************key and led******************************************************/		
 		status_led_shake();
+		status_led3_shake();
 		process_key();
   }
 }
