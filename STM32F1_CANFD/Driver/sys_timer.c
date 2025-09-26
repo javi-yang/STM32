@@ -143,7 +143,7 @@ void process_key()
       IN3=0;
       if(IN3_3>=10&&IN3_3<3000)
       {
-        //printf("k1 press\r\n");
+        printf("k1 press\r\n");
 				
 		
 				if(amp_vol <= 0x0001)
@@ -174,7 +174,7 @@ void process_key()
         IN4=0;
         if(IN4_3>=10&&IN4_3<3000)
         {
-          //printf("k2 press\r\n");
+          printf("k2 press\r\n");
 					
 		  			amp_vol += 0x10;
 					
@@ -201,7 +201,7 @@ void process_key()
         IN5=0;
         if(IN5_3>=10&&IN5_3<3000)
         {
-          //printf("k3 press\r\n");
+          printf("k3 press\r\n");
 
 					
 					amp_vol = 0x0081;

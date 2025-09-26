@@ -10,6 +10,7 @@ Updated for AMP usage. 2025.4.17 YANG
 #include "main.h"
 #include "sys_phr.h"
 #include "sys_timer.h"
+#include "stm32f10x_usart.h"
 
 void can_msg_transmit(void);
 int8_t canfd_rcv_poll(void);
@@ -26,6 +27,8 @@ CANFD_RX_MSG can_rx_msg;
 CANFD_TX_MSG can_tx_msg;
 
 void Uart1_SendData(unsigned char data);
+
+
 int main(void)
 {
     RCC_ClocksTypeDef RCC_Clocks;
@@ -83,7 +86,17 @@ int main(void)
             delay_10ms(5);
 
         }
-
+        if (can_rx_flag)
+        {
+            can_rx_flag = FALSE;
+            printf("CAN RX:");
+            for (i = 0; i < can_rx_msg.head.bF.ctrl.DLC; i++)
+            {
+                printf(" %02X", can_rx_msg.dat[i]);
+            }
+            printf("\r\n");
+        } 
+        //printf("OKOKOK\r\n");
         etk_can_init(CAN_500K_2M); // YANG: for BV00013A
         for (j = 0; j < 2; j++)    // YANG: wakeup message
         {
@@ -137,6 +150,7 @@ int8_t canfd_rcv_poll(void)
         } while (rxFlags & CAN_RX_FIFO_NOT_EMPTY_EVENT);
 
         can_rx_flag = TRUE;
+
     }
 
     return TRUE;
