@@ -1,9 +1,9 @@
 .\output\bsp_usart.o: ..\Driver\bsp_usart.c
 .\output\bsp_usart.o: ..\Driver\bsp_usart.h
-.\output\bsp_usart.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdio.h
+.\output\bsp_usart.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdio.h
 .\output\bsp_usart.o: ..\Common\CMSIS\CM3\DeviceSupport\ST\STM32F10x\stm32f10x.h
 .\output\bsp_usart.o: ..\Common\CMSIS\CM3\CoreSupport\core_cm3.h
-.\output\bsp_usart.o: D:\Program Files (x86)\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\bsp_usart.o: D:\Program Files\ARM\ARMCC\Bin\..\include\stdint.h
 .\output\bsp_usart.o: ..\Common\CMSIS\CM3\DeviceSupport\ST\STM32F10x\system_stm32f10x.h
 .\output\bsp_usart.o: ..\User\stm32f10x_conf.h
 .\output\bsp_usart.o: ..\Common\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
