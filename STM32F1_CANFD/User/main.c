@@ -93,7 +93,7 @@ int main(void)
         //can_int_gpio_exti_init();
         for (j = 0; j < 2; j++)    // YANG: wakeup message
         {
-            can_tx_msg.head.bF.id.SID = 0x000; // YANG: ID?? changed from 123 to 666
+            can_tx_msg.head.bF.id.SID = 0x123; // YANG: ID?? changed from 123 to 666
 
             can_tx_msg.head.bF.ctrl.DLC = CAN_DLC_8; //   YANG: changed from 64 to 8  
             can_tx_msg.head.bF.ctrl.IDE = 0;         // Extended CAN ID false
