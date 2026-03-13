@@ -111,9 +111,9 @@ int main(void)
     __HAL_UART_ENABLE_IT(&huart3, UART_IT_IDLE);
     HAL_UART_Receive_DMA(&huart3, xSerial3.ucData, UART3_MAX_LEN);
     HAL_Delay(100);
-    OLED_Init();			//³õÊ¼»¯OLED
+    OLED_Init();			//ï¿½ï¿½Ê¼ï¿½ï¿½OLED
     OLED_Clear();
-    xMacInfo.uart_send_rate = 30;//´®¿ÚÉÏ´«ËÙÂÊ30ºÁÃë
+    xMacInfo.uart_send_rate = 30;//ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½30ï¿½ï¿½ï¿½ï¿½
     xMacInfo.scr_refresh_rate = 100;
 
     /* USER CODE END 2 */
@@ -156,11 +156,11 @@ int main(void)
 
             if(xMacInfo.mode_index<3)
             {
-                printf("<ch%d>:%0.0f\n", xMacInfo.mode_index+1,(float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9);
+                printf("<ch%d>:%0.0f\r\n", xMacInfo.mode_index+1,(float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9);
             }
             else if(xMacInfo.mode_index==3)
             {
-                printf("<all>:%0.0f,%0.0f,%0.0f\n", (float)ADC_BUF[0] * (3.3 / 4096)* 1000 * 14 / 9,(float)ADC_BUF[1] * (3.3 / 4096)* 1000 * 14 / 9,(float)ADC_BUF[2] * (3.3 / 4096)* 1000 * 14 / 9);
+                printf("<all>:%0.0f,%0.0f,%0.0f\r\n", (float)ADC_BUF[0] * (3.3 / 4096)* 1000 * 14 / 9,(float)ADC_BUF[1] * (3.3 / 4096)* 1000 * 14 / 9,(float)ADC_BUF[2] * (3.3 / 4096)* 1000 * 14 / 9);
             }
         }
     }

@@ -1,4 +1,3 @@
-//https://item.taobao.com/item.htm?id=717251001647
 #include "common.h"
 
 #define FLASH_MACINFO_ADDR 0x0800FC00  // 指定的 Flash 地址

@@ -101,10 +101,7 @@ int main(void)
             can_tx_msg.head.bF.ctrl.BRS = TRUE;      
             can_tx_msg.head.bF.ctrl.FDF = 0;      // 
 
-            can_tx_msg.dat[0] = d;
-            can_tx_msg.dat[1] = d;
-            can_tx_msg.dat[2] = d;
-            can_tx_msg.dat[3] = d;
+            can_tx_msg.dat[0] = 0x00;
 
             can_msg_transmit();
 

@@ -10,7 +10,7 @@ uint8_t scott_data[22] = {0};
 
 void send_mode1()
 {
-	printf("<v>:%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f\n",\
+	printf("<v>:%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f,%.3f\r\n",\
 	(float)ADC_BUF[0] * (3.3 / 4096),\
 	(float)ADC_BUF[1] * (3.3 / 4096),\
 	(float)ADC_BUF[2] * (3.3 / 4096),\
