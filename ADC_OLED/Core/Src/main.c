@@ -50,6 +50,9 @@ xMacInfo_t xMacInfo = {0};
 uint32_t ADC_BUF[30] = {0};
 uint8_t update_flag = 0;
 uint8_t current_ch_index=0;
+
+int ch;
+float vol;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -135,6 +138,7 @@ int main(void)
 						}
 					  OLED_Clear();
 						xMacInfo.show_once_ch_title=0;
+
         }
 
         if(xMacInfo.k2_flag)
@@ -152,16 +156,34 @@ int main(void)
 
         if(xMacInfo.uart_send_flag)
         {
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_SET);
             xMacInfo.uart_send_flag = 0;
 
             if(xMacInfo.mode_index<3)
             {
                 printf("<ch%d>:%0.0f\r\n", xMacInfo.mode_index+1,(float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9);
+                vol = (float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9;
+                ch = xMacInfo.mode_index + 1;
+                
+                if(ch == 1)
+                {
+                    if(vol > 1000)
+                    {
+                        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
+                    }
+                    else
+                    {
+                        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
+                    }
+                }
             }
             else if(xMacInfo.mode_index==3)
             {
                 printf("<all>:%0.0f,%0.0f,%0.0f\r\n", (float)ADC_BUF[0] * (3.3 / 4096)* 1000 * 14 / 9,(float)ADC_BUF[1] * (3.3 / 4096)* 1000 * 14 / 9,(float)ADC_BUF[2] * (3.3 / 4096)* 1000 * 14 / 9);
             }
+
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+   
         }
     }
 
