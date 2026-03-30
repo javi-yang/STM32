@@ -50,9 +50,11 @@ xMacInfo_t xMacInfo = {0};
 uint32_t ADC_BUF[30] = {0};
 uint8_t update_flag = 0;
 uint8_t current_ch_index=0;
+uint32_t Indi_Counter = 0;
 
 int ch;
 float vol;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -194,9 +196,10 @@ void Voltage_Indicate(void)
                 
     if(ch == 1)
     {
-        if(vol > 2000)
+        if(vol > 4500)
         {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
+            Indi_Counter++;
         }
         else
         {

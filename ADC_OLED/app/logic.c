@@ -3,6 +3,7 @@
 #include "common.h"
 
 extern uint32_t ADC_BUF[30];
+extern uint32_t Indi_Counter;
 uint16_t adc_ch_average[3] = {0};
 #define N 11
 char median_filter()//��λ�˲�
@@ -86,7 +87,10 @@ void lcd_vol_adc_display(uint8_t ch_index)
 				xMacInfo.show_once_ch_title=1;
 			}
 			snprintf(ch, 20, "VOL%d: %0.3fV",ch_index+1, (float)adc_ch_average[ch_index] * (3.3 / 4096) * 14 / 9);
-			OLED_ShowString(15, 4, (uint8_t *)ch, 16);
+			OLED_ShowString(15, 3, (uint8_t *)ch, 16);
+            snprintf(ch, 20, "CNT:%lu", (unsigned long)Indi_Counter);
+            OLED_ShowString(15, 6, (uint8_t *)ch, 16);
+            
 		}
 		else if(ch_index==3)
 		{

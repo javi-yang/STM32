@@ -33,8 +33,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x60D851EB)
 I (D:\Program Files\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (D:\Program Files\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 F (..\app\oled.c)(0x67E90919)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\oled.o --omf_browse hall_adc_oled\oled.crf --depend hall_adc_oled\oled.d)
-I (..\app\common.h)(0x683076F0)
-I (../Core/Inc/main.h)(0x69C9E4BC)
+I (..\app\common.h)(0x69C9F168)
+I (../Core/Inc/main.h)(0x69C9EC0E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x646098EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x60D851EB)
@@ -72,9 +72,9 @@ I (..\app\oled.h)(0x67E90968)
 I (..\app\bmp.h)(0x645F111E)
 I (..\app\oledfont.h)(0x69C61D1E)
 F (..\app\bmp.c)(0x67E90911)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\bmp.o --omf_browse hall_adc_oled\bmp.crf --depend hall_adc_oled\bmp.d)
-F (..\app\logic.c)(0x69C61D21)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\logic.o --omf_browse hall_adc_oled\logic.crf --depend hall_adc_oled\logic.d)
-I (..\app\common.h)(0x683076F0)
-I (../Core/Inc/main.h)(0x69C9E4BC)
+F (..\app\logic.c)(0x69C9F299)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\logic.o --omf_browse hall_adc_oled\logic.crf --depend hall_adc_oled\logic.d)
+I (..\app\common.h)(0x69C9F168)
+I (../Core/Inc/main.h)(0x69C9EC0E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x646098EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x60D851EB)
@@ -110,10 +110,10 @@ I (D:\Program Files\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (..\app\logic.h)(0x67E90950)
 I (..\app\oled.h)(0x67E90968)
 I (..\app\bmp.h)(0x645F111E)
-F (..\app\common.h)(0x683076F0)()
+F (..\app\common.h)(0x69C9F168)()
 F (..\app\lg_timer.c)(0x683078E4)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\lg_timer.o --omf_browse hall_adc_oled\lg_timer.crf --depend hall_adc_oled\lg_timer.d)
-I (..\app\common.h)(0x683076F0)
-I (../Core/Inc/main.h)(0x69C9E4BC)
+I (..\app\common.h)(0x69C9F168)
+I (../Core/Inc/main.h)(0x69C9EC0E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x646098EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x60D851EB)
@@ -149,8 +149,8 @@ I (D:\Program Files\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (..\app\logic.h)(0x67E90950)
 I (..\app\oled.h)(0x67E90968)
 I (..\app\bmp.h)(0x645F111E)
-F (../Core/Src/main.c)(0x69C9E59C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\main.o --omf_browse hall_adc_oled\main.crf --depend hall_adc_oled\main.d)
-I (../Core/Inc/main.h)(0x69C9E4BC)
+F (../Core/Src/main.c)(0x69C9F39B)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\main.o --omf_browse hall_adc_oled\main.crf --depend hall_adc_oled\main.d)
+I (../Core/Inc/main.h)(0x69C9EC0E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x646098EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x60D851EB)
@@ -180,7 +180,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x60D851EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x60D851EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x60D851EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x60D851EB)
-I (..\app\common.h)(0x683076F0)
+I (..\app\common.h)(0x69C9F168)
 I (D:\Program Files\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (D:\Program Files\ARM\ARMCC\include\stdlib.h)(0x599EDB3C)
 I (D:\Program Files\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
@@ -188,7 +188,7 @@ I (..\app\logic.h)(0x67E90950)
 I (..\app\oled.h)(0x67E90968)
 I (..\app\bmp.h)(0x645F111E)
 F (../Core/Src/stm32f1xx_it.c)(0x683079B1)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\stm32f1xx_it.o --omf_browse hall_adc_oled\stm32f1xx_it.crf --depend hall_adc_oled\stm32f1xx_it.d)
-I (../Core/Inc/main.h)(0x69C9E4BC)
+I (../Core/Inc/main.h)(0x69C9EC0E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x646098EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x60D851EB)
@@ -220,7 +220,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x60D851EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_it.h)(0x646098EB)
 F (../Core/Src/stm32f1xx_hal_msp.c)(0x646098EB)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ..\app-I.\RTE\_Hall_ADC_OLED-I"D:\Program Files\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include"-I"D:\Program Files\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o hall_adc_oled\stm32f1xx_hal_msp.o --omf_browse hall_adc_oled\stm32f1xx_hal_msp.crf --depend hall_adc_oled\stm32f1xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x69C9E4BC)
+I (../Core/Inc/main.h)(0x69C9EC0E)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x60D851EB)
 I (../Core/Inc/stm32f1xx_hal_conf.h)(0x646098EB)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h)(0x60D851EB)
