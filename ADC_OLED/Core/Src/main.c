@@ -162,20 +162,7 @@ int main(void)
             if(xMacInfo.mode_index<3)
             {
                 printf("<ch%d>:%0.0f\r\n", xMacInfo.mode_index+1,(float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9);
-                vol = (float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9;
-                ch = xMacInfo.mode_index + 1;
-                
-                if(ch == 1)
-                {
-                    if(vol > 1000)
-                    {
-                        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
-                    }
-                    else
-                    {
-                        HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
-                    }
-                }
+
             }
             else if(xMacInfo.mode_index==3)
             {
@@ -185,6 +172,11 @@ int main(void)
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
    
         }
+
+        Voltage_Indicate();
+
+
+
     }
 
     /* USER CODE END 3 */
@@ -194,6 +186,26 @@ int main(void)
   * @brief System Clock Configuration
   * @retval None
   */
+
+void Voltage_Indicate(void)
+{
+    vol = (float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9;
+    ch = xMacInfo.mode_index + 1;
+                
+    if(ch == 1)
+    {
+        if(vol > 2000)
+        {
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
+        }
+        else
+        {
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
+        }
+    }
+}
+
+
 void SystemClock_Config(void)
 {
     RCC_OscInitTypeDef RCC_OscInitStruct = {0};

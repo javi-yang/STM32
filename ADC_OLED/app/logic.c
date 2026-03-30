@@ -5,7 +5,7 @@
 extern uint32_t ADC_BUF[30];
 uint16_t adc_ch_average[3] = {0};
 #define N 11
-char median_filter()//中位滤波
+char median_filter()//锟斤拷位锟剿诧拷
 {
     char value_buf[N];
     char count, i, j, temp;
@@ -100,7 +100,7 @@ void lcd_vol_adc_display(uint8_t ch_index)
 		}
 }
 
-//void Airplane()//hex协议，通道一
+//void Airplane()//hex协锟介，通锟斤拷一
 //{
 //	uint8_t sendBuf[4];
 //	sendBuf[0]=ADC_BUF[0]>>8;

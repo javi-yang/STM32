@@ -52,6 +52,7 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+void Voltage_Indicate(void);
 
 /* USER CODE BEGIN EFP */
 
