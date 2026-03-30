@@ -50,10 +50,7 @@ xMacInfo_t xMacInfo = {0};
 uint32_t ADC_BUF[30] = {0};
 uint8_t update_flag = 0;
 uint8_t current_ch_index=0;
-uint32_t Indi_Counter = 0;
-
-int ch;
-float vol;
+uint32_t Indi_Counter = 1;
 
 /* USER CODE END PV */
 
@@ -153,7 +150,7 @@ int main(void)
         if(xMacInfo.scr_refresh_flag)
         {
             xMacInfo.scr_refresh_flag = 0;
-						lcd_vol_adc_display(xMacInfo.mode_index);
+			lcd_vol_adc_display(xMacInfo.mode_index);
         }
 
         if(xMacInfo.uart_send_flag)
@@ -191,19 +188,48 @@ int main(void)
 
 void Voltage_Indicate(void)
 {
-    vol = (float)ADC_BUF[0] * (3.3 / 4096) * 1000 * 14 / 9;
+    int ch;
+    float vol;
+    static int UnderThreshold_flag = 0;
+    static float vol_history[10] = {0};
+    static int vol_index = 0;
+    float vol_evrg = 0;
+    int i;
+    vol = (float)ADC_BUF[0] * (3.3f / 4096) * 1000 * 14 / 9;
+    // 存储最新vol值
+    vol_history[vol_index] = vol;
+    vol_index = (vol_index + 1) % 10;
+    // 计算最近10次的平均值
+    for(i = 0; i < 10; i++) {
+        vol_evrg += vol_history[i];
+    }
+    vol_evrg /= 10.0f;
+
     ch = xMacInfo.mode_index + 1;
-                
+    // ...existing code...
     if(ch == 1)
     {
-        if(vol > 4500)
+        if(vol_evrg > 1000)
         {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_SET);
-            Indi_Counter++;
+            
         }
         else
         {
             HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, GPIO_PIN_RESET);
+        }
+        
+        if(vol > 500)
+        {
+            if(UnderThreshold_flag == 1)
+            {
+                Indi_Counter++;
+                UnderThreshold_flag = 0;
+            }
+        }
+        else
+        {
+            UnderThreshold_flag = 1;
         }
     }
 }
